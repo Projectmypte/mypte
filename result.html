@@ -298,45 +298,59 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-gray-200 text-xs">
                     <!-- Left: Skills Breakdown Chart -->
                     <div class="p-6">
-                        <h3 class="text-sm font-bold text-gray-800 mb-6">Skills Breakdown</h3>
+                        <h3 class="text-2xl font-bold text-[#333] font-heading pb-3 mb-5 border-b border-gray-200">Skills Breakdown</h3>
 
-                        <div class="space-y-3 relative pl-16 pr-4">
-                            <!-- Overall 90 Vertical Guide Line -->
-                            <div class="absolute top-0 bottom-0 left-[calc(4rem+90%)] w-0.5 bg-gray-400 z-10 flex flex-col items-center">
-                                <span class="text-[10px] text-gray-600 whitespace-nowrap absolute -top-5 font-medium">Overall <strong class="text-gray-900">90</strong></span>
-                            </div>
+                        <!-- Overall label -->
+                        <div class="flex justify-end items-baseline mb-2 text-[#1B3157]">
+                            <span class="text-base">Overall&nbsp;</span>
+                            <span class="text-lg">90</span>
+                        </div>
 
-                            <!-- Listening Bar -->
-                            <div class="flex items-center">
-                                <span class="w-16 -ml-16 text-right pr-3 text-gray-600 text-xs font-medium">Listening <strong class="text-gray-900 ml-1">88</strong></span>
-                                <div class="w-full bg-gray-100 h-5 rounded-sm overflow-hidden">
-                                    <div class="bg-skillNavy h-full" style="width: 88%;"></div>
+                        <div class="relative">
+                            <div class="space-y-2">
+                                <!-- Listening -->
+                                <div class="flex items-center">
+                                    <div class="w-36 shrink-0 text-right pr-4 text-sm text-gray-500">
+                                        Listening <strong class="text-[#1B3157] text-base ml-1">88</strong>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="h-10" style="width: 97.78%; background-color: #1B3157;"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Reading -->
+                                <div class="flex items-center">
+                                    <div class="w-36 shrink-0 text-right pr-4 text-sm text-gray-500">
+                                        Reading <strong class="text-[#1B3157] text-base ml-1">90</strong>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="h-10 w-full" style="background-color: #D3DE23;"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Speaking -->
+                                <div class="flex items-center">
+                                    <div class="w-36 shrink-0 text-right pr-4 text-sm text-gray-500">
+                                        Speaking <strong class="text-[#1B3157] text-base ml-1">90</strong>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="h-10 w-full" style="background-color: #707070;"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Writing -->
+                                <div class="flex items-center">
+                                    <div class="w-36 shrink-0 text-right pr-4 text-sm text-gray-500">
+                                        Writing <strong class="text-[#1B3157] text-base ml-1">90</strong>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="h-10 w-full" style="background-color: #9E2380;"></div>
+                                    </div>
                                 </div>
                             </div>
 
-                            <!-- Reading Bar -->
-                            <div class="flex items-center">
-                                <span class="w-16 -ml-16 text-right pr-3 text-gray-600 text-xs font-medium">Reading <strong class="text-gray-900 ml-1">90</strong></span>
-                                <div class="w-full bg-gray-100 h-5 rounded-sm overflow-hidden">
-                                    <div class="bg-skillGreen h-full" style="width: 90%;"></div>
-                                </div>
-                            </div>
-
-                            <!-- Speaking Bar -->
-                            <div class="flex items-center">
-                                <span class="w-16 -ml-16 text-right pr-3 text-gray-600 text-xs font-medium">Speaking <strong class="text-gray-900 ml-1">90</strong></span>
-                                <div class="w-full bg-gray-100 h-5 rounded-sm overflow-hidden">
-                                    <div class="bg-skillGrey h-full" style="width: 90%;"></div>
-                                </div>
-                            </div>
-
-                            <!-- Writing Bar -->
-                            <div class="flex items-center">
-                                <span class="w-16 -ml-16 text-right pr-3 text-gray-600 text-xs font-medium">Writing <strong class="text-gray-900 ml-1">90</strong></span>
-                                <div class="w-full bg-gray-100 h-5 rounded-sm overflow-hidden">
-                                    <div class="bg-skillPink h-full" style="width: 90%;"></div>
-                                </div>
-                            </div>
+                            <!-- Overall vertical line (90) -->
+                            <div class="absolute right-0 w-1.5" style="top: -6px; bottom: -14px; background-color: #7E96AE;"></div>
                         </div>
                     </div>
 
