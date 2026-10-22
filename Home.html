@@ -1,0 +1,264 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>myPTE – Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+  :root{color-scheme:light;--navy:#120a38;--purple:#5231a9;--bg:#eeebf8;--line:#c5bbef;--grey:#f5f5f5;--txt:#1c1740}
+  *{box-sizing:border-box}
+  html{scroll-padding-top:70px}
+  body{margin:0;background:var(--bg);color:var(--txt);font-family:'Plus Jakarta Sans','Helvetica Neue',Arial,sans-serif;font-size:14px;padding-bottom:env(safe-area-inset-bottom,0px)}
+  a{color:var(--purple);text-decoration:none;font-weight:500}
+  a .ar{margin-left:8px}
+  header{position:sticky;top:0;z-index:20;background:var(--navy);height:65px;padding-top:env(safe-area-inset-top,0px);box-sizing:content-box;display:flex;align-items:center;justify-content:space-between;padding-left:96px;padding-right:78px}
+  header svg.logo{width:105px;height:auto}
+  header .logo .c{fill:#fff}
+  nav{position:absolute;left:calc(50% + 10px);transform:translateX(-50%);display:flex;gap:76px}
+  nav a{color:#fff;font-weight:600;font-size:13.5px}
+  .right{display:flex;align-items:center;gap:19px;color:#fff}
+  .pill{display:flex;align-items:center;gap:6px;background:#f3f0fc;border-radius:999px;padding:3px 3px 3px 11px;color:var(--navy)}
+  .pill i{width:30px;height:30px;border-radius:50%;background:#b9a9f0;display:grid;place-items:center;font-style:normal;font-weight:600;font-size:13px}
+  h1.w{font-weight:300;font-size:24px;line-height:30px;letter-spacing:.02em;text-align:center;color:var(--navy);margin:21px 0 24px}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 16px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:4px;padding:14px;margin-bottom:15px}
+  h2{font-size:21px;line-height:28px;font-weight:500;color:var(--navy);margin:0 0 10px}
+  .sub{margin:0 0 12px;line-height:20px;font-size:13.5px}
+  .banner{display:flex;align-items:center;gap:18px;background:#fff;border-radius:6px;height:121px;padding:0 24px;margin-bottom:66px}
+  .banner .ill{width:96px;height:96px;object-fit:contain;flex:none;display:block}
+  .badge{display:inline-block;background:#fdd34d;color:#3a2c00;font-size:10px;font-weight:700;padding:3px 8px;border-radius:999px;margin-bottom:6px}
+  .banner b{display:block;color:var(--purple);font-size:16px;font-weight:600;margin-bottom:8px}
+  .btn{display:inline-flex;align-items:center;gap:6px;background:var(--purple);color:#fff;border:0;border-radius:999px;font:600 13px 'Plus Jakarta Sans',Arial,sans-serif;padding:0 17px;height:38px;cursor:pointer}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:13px;align-items:start}
+  .steps{display:flex;align-items:center;gap:41px;padding:0 0 0 13px;margin-top:6px;font-weight:500;font-size:14px}
+  .steps span{display:flex;align-items:center;gap:6px}
+  .chk{color:#f0b400;font-weight:700}
+  .find{text-align:center;padding:17px 14px 24px}
+  .find img.globe{display:block;margin:0 auto;width:122px;height:auto}
+  .find h2{margin-bottom:22px}
+  .find p{font-size:12px;line-height:16px;margin:10px 0 21px}
+  .sel{display:flex;align-items:center;gap:10px;width:306px;height:52px;margin:0 auto 43px;border:1px solid #777;border-radius:2px;background:#fff;padding:0 13px;font-size:21px;font-weight:300;letter-spacing:.03em;color:#444;cursor:pointer;font-family:inherit}
+  .next{display:block;width:220px;height:30px;border:1px solid #e6e3f2;border-radius:999px;background:#fff;color:#aaa;font:600 13px 'Plus Jakarta Sans',Arial,sans-serif;margin:0 auto}
+  .dots{display:flex;gap:11px;justify-content:center;margin-top:20px}
+  .dots i{width:12px;height:12px;border-radius:50%;background:#e8e4f6}.dots i:first-child{background:var(--purple)}
+  .hear{text-align:center;padding-bottom:32px}
+  .hear p{font-size:13.5px;line-height:20px;margin:0 0 13px}
+  .hear svg{display:block;margin:0 auto}
+  .ghost{display:block;width:220px;height:30px;margin:10px auto 0;border:1px solid var(--navy);border-radius:999px;background:#fff;color:var(--navy);font:600 13px 'Plus Jakarta Sans',Arial,sans-serif;cursor:pointer}
+  .fmt{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
+  .fmt div{border:1px solid var(--line);border-radius:4px;padding:13px 14px 14px;min-height:130px;display:flex;flex-direction:column}
+  .fmt b{font-size:15px;line-height:20px;font-weight:500;color:var(--navy);margin-bottom:8px}
+  .fmt p{margin:0 0 auto;font-size:13px;line-height:17px}
+  .fmt a{font-size:13px;margin-top:10px}
+  .res{background:var(--grey);border-radius:4px;padding:10px 10px 15px;margin-bottom:10px}
+  .res b{display:block;font-size:16px;font-weight:500;color:#222;line-height:20px;margin:0 0 10px}
+  .res p{margin:0 0 18px;font-size:13px;line-height:17px}
+  .links{display:flex;gap:13px;font-size:13.5px}
+  .paid{display:flex;gap:17px;margin-bottom:24px}
+  .ic{flex:none;margin-top:2px;width:50px;height:50px;border-radius:50%;background:#ebe8f7;display:grid;place-items:center;color:var(--purple)}
+  .paid b{display:block;font-weight:400;font-size:16px;line-height:20px;margin-bottom:7px;color:#222}
+  .paid p{margin:0 0 10px;line-height:17px;font-size:13.5px}
+  footer{text-align:center;font-size:10.5px;line-height:15px;padding:6px 0 26px;color:#333}
+  footer a{font-weight:400}
+  .ov{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:50;display:flex;align-items:center;justify-content:center;padding:16px}
+  .ov[hidden]{display:none}
+  body.pending{visibility:hidden}
+  .right{position:relative}.pill{cursor:pointer}
+  .menu{position:absolute;right:0;top:46px;background:#fff;border-radius:8px;box-shadow:0 4px 18px rgba(0,0,0,.25);min-width:150px;padding:6px;z-index:60}
+  .menu[hidden]{display:none}
+  .menu button{display:block;width:100%;text-align:left;background:none;border:0;padding:10px 12px;font:500 14px inherit;font-family:inherit;color:var(--navy);cursor:pointer;border-radius:6px}
+  .menu button:hover{background:#f3f0fc}
+  .modal{background:#fff;border-radius:12px;width:518px;max-width:100%;padding:14px 34px 21px;font-size:16px;font-weight:300;line-height:21px;max-height:100%;overflow:auto}
+  .modal .x{background:none;border:0;padding:0;cursor:pointer;color:#333;display:block;height:22px;line-height:0}
+  .modal h3{text-align:center;font-size:24px;line-height:30px;font-weight:400;margin:3px 0 10px;color:#000}
+  .modal p{margin:0 0 14px;padding:0 8px}
+  .modal ul{margin:-14px 0 14px;padding:0 8px 0 46px}
+  .modal b{font-weight:500}
+  .modal .btn{width:100%;height:34px;justify-content:center;font-size:14px;margin-top:8px}
+  .res-card,.rebook{text-align:center}
+  .res-card{padding:12px 14px 20px}
+  .res-card h2,.rebook h2{margin:0 0 6px}
+  .res-card .cert{display:block;margin:6px auto 22px}
+  .rebook{padding:18px 14px 22px}
+  .rebook h2{font-size:24px;line-height:30px;margin-bottom:2px}
+  .rebook p{margin:0}
+  .rb1{font-size:14px;line-height:19px}
+  .rb2{font-size:18px;line-height:24px;color:#1f4e6b;margin-bottom:8px!important}
+  .rb3{font-size:14px;line-height:17px;margin-bottom:22px!important}
+  .rb3 b{font-weight:600;color:#222}
+  .btn.wide{width:216px;height:30px;justify-content:center;padding:0}
+  .btn.yellow{background:#fdcb0a;color:#222}
+  nav a.on{position:relative}
+  nav a.on:after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:2px;background:#fdcb0a}
+  @media(max-width:900px){
+  header{padding:0 16px}nav{display:none}
+  .cols{grid-template-columns:1fr}.banner{height:auto;padding:16px;margin-bottom:24px;flex-wrap:wrap}
+  .fmt{grid-template-columns:1fr}.sel{max-width:100%}
+  }
+  </style>
+  </head>
+  <body class="pending">
+
+  <header>
+    <svg class="logo" viewBox="245 246 1930 400" aria-label="Pearson" xmlns="http://www.w3.org/2000/svg"><g><path class="c" d="M365.27,293.02v.06s7.39,56.57,7.39,153.13-7.39,153.19-7.39,153.12v.06c37.77-40.09,60.94-93.93,60.94-153.17v-.03c0-59.24-23.17-113.08-60.94-153.17Z"/><path class="c" d="M366.6,394.43c-7.92-29.94-22.75-58.15-43.29-83.78-17.62-19.79-39.01-37.06-63.25-51.07,23.51,37.16,39.33,106.66,39.33,186.27s-15.79,148.95-39.25,186.15c-.18.42-.37.84-.55,1.26,13.52-7.78,26.16-16.57,37.75-26.25,40.01-38.08,66.33-83.78,73.72-133.49,1.06-8.86,1.61-17.88,1.61-27.03h0c0-17.93-2.1-35.35-6.06-52.07Z"/></g><g><path class="c" d="M1772.62,373.65c-75.23,0-135.17,58.93-135.17,133.09s59.75,132.85,134.98,132.85,134.98-58.75,134.98-132.9-59.57-133.03-134.8-133.03ZM1772.44,579.84c-43.23,0-69.89-33.61-69.89-73.1s26.67-73.15,69.89-73.15,69.89,33.61,69.89,73.1-26.67,73.15-69.89,73.15Z"/><path class="c" d="M826.45,373.67c-74.61,0-128.55,60.24-128.56,133.44,0,71.62,51.62,132.63,126.57,132.63,54.08,0,103.31-32.43,121.91-82.94h-65.64c-10.17,13.52-30.09,25-55.86,25-41.07,0-59.74-29.32-61.9-51.71h187.72c1.1-7.21,1.7-19.18,1.7-27.5,0-77.53-57.04-128.92-125.94-128.92ZM763.12,481.22c0-27.75,27.36-50.23,61.1-50.23s61.12,22.49,61.12,50.23h-122.23Z"/><path class="c" d="M2037.18,373.68c-63.36,0-114.57,51.18-114.57,114.56v145.02h64.24l.02-144.93c0-32.75,23.26-53.62,50.21-53.62,26.93,0,50.06,21.03,50.03,53.79l-.13,144.76h64.79v-144.98c.01-63.38-51.22-114.6-114.59-114.6Z"/><path class="c" d="M1431.05,381.76c-7.09-3.32-22.48-8.09-40.05-8.09-50.65,0-70.34,38.98-72.52,43.3v-36.82h-60.82l-.17,253.07,64.2.03v-165.59c1.76-3.42,19.78-34.16,57.09-34.16,13.95,0,26.65,4.3,29.87,5.87l22.41-57.62Z"/><path class="c" d="M1100.52,373.65c-74.69,0-135.42,58.28-135.42,134.2,0,71.09,53.25,132.03,125.22,131.88,36.23-.07,64.81-15.6,79.67-38.11v31.64h65.04s-.05-129.86-.05-129.86c-.03-73.17-60.85-129.75-134.45-129.75ZM1100.08,580.69c-43.23,0-69.9-34.11-69.9-73.6s26.68-73.6,69.9-73.6,69.9,34.11,69.9,73.6-26.68,73.6-69.9,73.6Z"/><path class="c" d="M1546.9,482.16c-42.68-9.08-59.75-12.82-59.75-27.33,0-16.42,21.88-24.97,44.97-24.97,35.06,0,60.98,19.69,63.86,21.88l32-46.96c-16.38-10.98-47.53-31.12-96.44-31.12-67.9,0-107.38,38.66-107.38,81.77,0,45.38,43.73,66.82,93.91,77.39,38.39,8.09,50.15,11.2,50.15,24.75,0,18.48-21.88,25.94-44.15,25.94-34.35,0-62.85-17.75-80.15-36.26l-35.74,46.41c14.91,14.18,53.51,46.05,114.8,46.05s109.82-34.86,109.82-78.08c0-52.28-35.75-68.82-85.9-79.49Z"/><path class="c" d="M591.01,259.58h-126.76l-.04,373.68h63.79l.05-134.64h62.96c74.16,0,123.77-51.21,123.77-119.52s-49.61-119.52-123.77-119.52ZM583,437.79h-54.95v-117.38h54.95c43.75,0,66.7,23.48,66.7,58.69s-22.95,58.69-66.7,58.69Z"/></g></svg>
+    <nav><a class="on">myPTE</a><a>My Activity</a><a>Smart Prep</a><a>Help</a></nav>
+    <div class="right">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+      <div class="pill" id="pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg><i id="initials">·</i></div>
+      <div class="menu" id="menu" hidden><div id="menu-user" style="padding:8px 12px 10px;border-bottom:1px solid #eee;margin-bottom:4px;font-size:13px;line-height:18px;color:#333"></div><button id="logout">Log out</button></div>
+    </div>
+  </header>
+
+  <h1 class="w" id="welcome">Welcome</h1>
+
+  <div class="wrap">
+    <div class="banner">
+      <img class="ill" src="https://cdn.braze.eu/appboy/communication/assets/image_assets/images/6a3e83e17439ad0087ae088d/original.png?1782481888" alt="">
+      <div><span class="badge">New!</span><b>We have a new AI practice tool for PTE Academic and PTE Core</b><button class="btn">View more <span>→</span></button></div>
+    </div>
+
+    <div class="cols">
+      <div>
+      <div class="card res-card">
+    <h2>Your results are now available!</h2>
+
+    <svg class="cert" width="44" height="62" viewBox="0 0 44 62" fill="none" aria-hidden="true">
+        <rect x="3" y="2" width="36" height="52" rx="2" fill="#1b7b9c"/>
+        <rect x="3" y="2" width="5" height="52" fill="#14607c"/>
+        <path d="M14 12h20M14 19h20M14 26h20M14 33h20M14 40h12" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M31 48l-4 12 6-3 4 5 1-13z" fill="#e8860c"/>
+        <circle cx="33" cy="46" r="7" fill="#f5a623"/>
+        <circle cx="33" cy="46" r="3.5" fill="#ffd166"/>
+    </svg>
+
+    <button class="btn wide" onclick="window.location.href='result.html'">
+        View your Score Report
+    </button>
+</div>
+        <div class="card rebook">
+          <h2>Re-book test</h2>
+          <p class="rb1">Click below to re-book your test</p>
+          <p class="rb2">PTE Core</p>
+          <p class="rb3"><b>MUST Test Centre 2</b><br>Misr Uni for Science and Technology<br>Al-Motamayez District, Gate 4<br>Central Library Building, 6 October City<br>Giza, EGY 12566</p>
+          <button class="btn wide yellow">Re-book PTE Core</button>
+        </div>
+
+        <div class="card find">
+          <h2>Find your Test</h2>
+          <img class="globe" src="https://mypte.pearsonpte.com/assets/testFinderWidget/globe.png" alt="" width="122">
+          <p>Which country would you like to study, work or settle in?</p>
+          <button class="sel" type="button"><svg width="26" height="22" viewBox="0 0 26 22" stroke="#4a30c4" stroke-width="2" fill="none"><path d="M9 3h16M9 11h16M9 19h16"/><circle cx="2.5" cy="3" r="1.5" fill="#4a30c4"/><circle cx="2.5" cy="11" r="1.5" fill="#4a30c4"/><circle cx="2.5" cy="19" r="1.5" fill="#4a30c4"/></svg>Select country</button>
+          <button class="next" disabled>Next</button>
+          <div class="dots"><i></i><i></i></div>
+        </div>
+
+        <div class="card hear">
+          <h2 style="margin-bottom:10px">We want to hear from you</h2>
+          <p>Help us improve by providing your suggestions and input.</p>
+          <svg width="104" height="94" viewBox="0 0 104 94" fill="none" aria-hidden="true">
+            <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c3b8f6"/><stop offset="1" stop-color="#7f68de"/></linearGradient></defs>
+            <path d="M22 44c-12 0-20 8-20 18 0 6 3 11 8 14-1 5-4 8-7 11 8-1 14-4 18-8 2 1 4 1 6 1 12 0 20-8 20-18s-9-18-25-18z" fill="#fff" stroke="#2a1a6e" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M62 4c-22 0-38 14-38 32s16 32 38 32c4 0 8-1 12-2 6 6 14 9 24 10-5-4-8-9-9-15 8-6 13-14 13-25C102 18 86 4 62 4z" fill="url(#bg)" stroke="#2a1a6e" stroke-width="1.6" stroke-linejoin="round"/>
+          </svg>
+          <button class="ghost" style="margin-top:15px">Give us your feedback</button>
+        </div>
+      </div>
+
+      <div>
+        <div class="card">
+          <h2>Test format</h2>
+          <p class="sub">Get familiar with the types of questions you can expect</p>
+          <div class="fmt">
+            <div><b>PTE Academic</b><p>Tests listening, reading, speaking and writing.</p><a>Learn more <span class="ar">→</span></a></div>
+            <div><b>PTE Core</b><p>Tests listening, reading, speaking and writing.</p><a>Learn more <span class="ar">→</span></a></div>
+            <div><b>PTE Home</b><p>Tests listening and speaking.</p><a>Learn more <span class="ar">→</span></a></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Free preparation resources</h2>
+          <p class="sub">Check your level, practice, and build confidence before test day</p>
+          <div class="res"><b>Short Scored Practice Test</b><p>Try a shorter version of your test and get scored results</p><div class="links"><a>PTE Academic <span class="ar">→</span></a><a>PTE Core <span class="ar">→</span></a></div></div>
+          <div class="res"><b>Official PTE AI Practice</b><p>Prepare for your test with free practice questions. We'll use AI to give you feedback and personalized insights.</p><div class="links"><a>PTE Academic <span class="ar">→</span></a><a>PTE Core <span class="ar">→</span></a></div></div>
+          <div class="res" style="margin-bottom:12px"><b>All free resources</b><p>Explore our free preparation resources by test</p><div class="links"><a>PTE Academic <span class="ar">→</span></a><a>PTE Core <span class="ar">→</span></a><a>PTE Home <span class="ar">→</span></a></div></div>
+        </div>
+
+        <div class="card" style="padding-bottom:2px">
+          <h2 style="margin-bottom:22px">Paid preparation resources</h2>
+          <div class="paid"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg></div><div><b>Scored Practice Tests (full-length) and more</b><p>Explore our premium preparation resources</p><div class="links"><a>PTE Academic Store <span class="ar">→</span></a><a>PTE Core Store <span class="ar">→</span></a></div></div></div>
+          <div class="paid"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2zM22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8zM15 9h4M15 12h4"/></svg></div><div><b>Access your purchases</b><p>Bought a preparation resource? You'll find it here</p><div class="links"><a>My purchases <span class="ar">→</span></a></div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <a>Privacy policy</a> | <a>Cookies</a> | <a>Contact us</a><br>Copyright &copy; 1996&ndash;2026 Pearson. All rights reserved.
+    </footer>
+  </div>
+
+  <div class="ov" id="ov" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="mt">
+      <button class="x" id="x" aria-label="Close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="8" cy="8" r="6.5"/><path d="M5.5 5.5l5 5M10.5 5.5l-5 5"/></svg></button>
+      <h3 id="mt">Welcome to myPTE!</h3>
+      <p>Your account was successfully created.</p>
+      <p><b>Do your account details exactly match your government-issued ID?</b></p>
+      <ul><li>Given name(s): <span id="m-given"></span></li><li>Surname(s): <span id="m-surname"></span></li><li>Date of birth: <span id="m-dob"></span></li></ul>
+      <p><b>Is your country of residence correct?</b> <span id="m-country"></span></p>
+      <p>To view your details, click on the profile icon. Any changes must be made <b>at least 3 days before a test</b>.</p>
+      <button class="btn" id="ok">OK, got it</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+  <script src="config.js"></script>
+  <script>
+    const MONTHS=["January","February","March","April","May","June","July","August","September","October","November","December"];
+    const token = getToken();
+
+    async function closeM(){
+      document.getElementById('ov').hidden=true;
+      await sb.rpc('mark_welcome_seen', { p_token: token });   // ما يظهرش تاني
+    }
+    document.getElementById('ok').onclick=closeM;
+    document.getElementById('x').onclick=closeM;
+
+    document.getElementById('pill').onclick=e=>{ e.stopPropagation(); const m=document.getElementById('menu'); m.hidden=!m.hidden; };
+    document.addEventListener('click',()=>{ document.getElementById('menu').hidden=true; });
+    document.getElementById('logout').onclick=async()=>{
+      await sb.rpc('logout_user', { p_token: token });
+      clearToken(); location.replace('index.html');
+    };
+
+    (async()=>{
+      if(!token){ location.replace('index.html'); return; }
+      const { data:u, error } = await sb.rpc('get_me', { p_token: token });
+      if(error || !u){ clearToken(); location.replace('index.html'); return; }   // الهوم للمسجلين فقط
+
+      const given = u.given_name || '', sur = u.surname || '';
+      const ini = ((given[0]||'') + (sur[0]||'')) || (u.username||'U')[0];
+      document.getElementById('initials').textContent = ini.toUpperCase();
+
+      const full = (given+' '+sur).trim();
+      document.getElementById('welcome').textContent = full ? 'Welcome, '+full : 'Welcome';
+      const mu = document.getElementById('menu-user');
+      mu.innerHTML = '<b style="color:#120a38"></b><br><span></span>';
+      mu.querySelector('b').textContent = full || 'My account';
+      mu.querySelector('span').textContent = u.username;
+
+      document.getElementById('m-given').textContent = given || 'None';
+      document.getElementById('m-surname').textContent = sur || 'None';
+      if(u.dob){
+        const [y,mo,d] = u.dob.split('-').map(Number);
+        document.getElementById('m-dob').textContent = d+' '+MONTHS[mo-1]+' '+y;
+      }
+      document.getElementById('m-country').textContent = u.country || '';
+
+      document.body.classList.remove('pending');
+      if(u.welcome_shown === false) document.getElementById('ov').hidden = false;   // بعد التسجيل بس
+    })();
+  </script>
+  </body>
+  </html>

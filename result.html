@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTE Core Score Report - Pearson</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pearsonNavy: '#120038',
+                        pearsonPurple: '#5E2BB8',
+                        pearsonLightPurple: '#C4B5FD',
+                        pearsonBtnPurple: '#4F14AD',
+                        pearsonYellow: '#ECA00A',
+                        pearsonBg: '#F3F4F8',
+                        pearsonBorder: '#E5E7EB',
+                        skillNavy: '#002B49',
+                        skillGreen: '#92C83E',
+                        skillGrey: '#53565A',
+                        skillPink: '#9C0067'
+                    },
+                    fontFamily: {
+                        sans: ['Open Sans', 'sans-serif'],
+                        heading: ['Rubik', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #F3F4F8;
+            color: #222222;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Print Specific Styles */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                background-color: #ffffff;
+            }
+            .shadow-custom {
+                box-shadow: none !important;
+            }
+        }
+
+        /* Custom Box Shadow for Card */
+        .shadow-custom {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Custom Score Badges Shape */
+        .overall-badge {
+            border-bottom-left-radius: 24px;
+            border-bottom-right-radius: 24px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        /* Circular Gauge Styles */
+        .circle-gauge {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: #ffffff;
+        }
+
+        /* Hover Transitions */
+        .btn-hover {
+            transition: all 0.2s ease-in-out;
+        }
+        .btn-hover:hover {
+            opacity: 0.92;
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+    <div>
+        <!-- TOP NAVIGATION BAR -->
+        <header class="bg-pearsonNavy text-white px-4 sm:px-8 py-3 flex items-center justify-between no-print border-b border-purple-900/40">
+            <!-- Left: Logo -->
+            <div class="flex items-center space-x-3">
+                <a href="#" class="flex items-center space-x-2">
+                    <!-- Pearson SVG Logo Signal Waves -->
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="text-teal-400">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="currentColor" opacity="0.2"/>
+                        <path d="M8.5 12c0-1.93 1.57-3.5 3.5-3.5s3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5S8.5 13.93 8.5 12z" fill="currentColor"/>
+                    </svg>
+                    <span class="text-xl font-bold tracking-tight text-white font-heading">Pearson</span>
+                </a>
+            </div>
+
+            <!-- Middle Navigation Links (Desktop) -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="Home.html" class="text-gray-300 hover:text-white transition">myPTE</a>
+                <a href="#" class="text-white font-semibold border-b-2 border-white pb-0.5">My Activity</a>
+                <a href="#" class="text-gray-300 hover:text-white transition">Smart Prep</a>
+                <a href="#" class="text-gray-300 hover:text-white transition">Help</a>
+            </nav>
+
+            <!-- Right Navigation Icons -->
+            <div class="flex items-center space-x-5 text-sm">
+                <a href="#" class="text-gray-300 hover:text-white relative p-1" title="Shopping Cart">
+                    <i class="fa-solid fa-cart-shopping text-lg"></i>
+                </a>
+                <button class="flex items-center space-x-2 bg-purple-900/60 hover:bg-purple-800/80 px-2.5 py-1 rounded-full border border-purple-400/30 transition">
+                    <i class="fa-solid fa-bars text-xs text-gray-300"></i>
+                    <div class="w-7 h-7 rounded-full bg-purple-200 text-pearsonNavy font-bold flex items-center justify-center text-xs">
+                        MA
+                    </div>
+                </button>
+            </div>
+        </header>
+
+        <!-- SECONDARY BAR / TITLE BAR -->
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-4">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <!-- Left Details -->
+                <div>
+                    <div class="text-xs text-gray-500 font-medium mb-1">
+                        PTE Core • ID549155234
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <a href="#" class="text-pearsonPurple hover:text-purple-900 text-xl no-print" title="Go back">
+                            <i class="fa-regular fa-circle-left"></i>
+                        </a>
+                        <h1 class="text-xl sm:text-2xl font-bold text-gray-900 font-heading">
+                            Wednesday, October 21, 2026 – 2:00 PM EEST
+                        </h1>
+                    </div>
+                </div>
+
+                <!-- Right Share Button -->
+                <div class="flex flex-col items-start md:items-end no-print">
+                    <button onclick="window.print()" class="btn-hover bg-pearsonPurple text-white px-6 py-2.5 rounded-full text-sm font-medium flex items-center space-x-2 shadow-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        <span>Share results</span>
+                    </button>
+                    <span class="text-[11px] text-gray-500 mt-1">
+                        Click the button above to search for an institution to share your score.
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN SCORE CARD CONTAINER -->
+        <main class="max-w-6xl mx-auto px-4 sm:px-6 mb-8">
+            <div class="bg-white rounded-lg border border-gray-200 shadow-custom overflow-hidden">
+                
+                <!-- SCORE REPORT BANNER -->
+                <div class="bg-pearsonYellow px-6 py-5 text-gray-900 border-b border-yellow-500/20">
+                    <h2 class="text-2xl sm:text-3xl font-bold tracking-tight font-heading">
+                        PTE Core | Score Report
+                    </h2>
+                    <p class="text-xs font-semibold text-gray-800 tracking-wide mt-1">
+                        Score Report Code: <span class="font-mono text-sm">4c1241LB51</span>
+                    </p>
+                </div>
+
+                <!-- TOP SECTION: SCORES OVERVIEW & COMMUNICATIVE SKILLS -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-gray-200 border-b border-gray-200">
+                    
+                    <!-- Scores Overview -->
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="text-base font-bold text-gray-800">Scores Overview</h3>
+                            <button class="text-gray-400 hover:text-gray-600" title="Scores Info">
+                                <i class="fa-regular fa-circle-question text-base"></i>
+                            </button>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                            <!-- Photo & Details -->
+                            <div class="flex items-start space-x-4">
+                                <div class="w-24 h-32 bg-gray-200 rounded border border-gray-300 overflow-hidden flex-shrink-0">
+                                    <img src="mohamed.jpg" alt="Candidate Photo" class="w-full h-full object-cover">
+                                </div>
+                                <div class="space-y-1">
+                                    <h4 class="text-sm font-bold text-gray-900 leading-snug">
+                                        MOHAMED TAHER ALI<br>AHMED
+                                    </h4>
+                                    <p class="text-xs text-gray-600 pt-1">
+                                        <span class="font-medium text-gray-700">Test Taker ID:</span> PTE004985409
+                                    </p>
+                                    <p class="text-xs text-gray-600">
+                                        <span class="font-medium text-gray-700">Registration ID:</span> 549155234
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Overall Score Badge -->
+                            <div class="self-center sm:self-auto flex flex-col items-center">
+                                <div class="overall-badge bg-pearsonNavy w-20 text-white flex flex-col overflow-hidden text-center shadow-md">
+                                    <div class="bg-teal-600 text-[9px] font-bold uppercase py-0.5 px-1 tracking-wider">
+                                        Overall Score
+                                    </div>
+                                    <div class="py-2 bg-gradient-to-b from-purple-900 to-pearsonNavy">
+                                        <span class="text-2xl font-bold font-heading">90</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Communicative Skills Rings -->
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="text-base font-bold text-gray-800">Communicative Skills</h3>
+                            <button class="text-gray-400 hover:text-gray-600" title="Skills Info">
+                                <i class="fa-regular fa-circle-question text-base"></i>
+                            </button>
+                        </div>
+
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                            <!-- Listening -->
+                            <div class="flex flex-col items-center">
+                                <div class="circle-gauge border-4 border-skillNavy text-gray-900 mb-2">
+                                    <span class="text-xl font-bold font-heading">88</span>
+                                </div>
+                                <span class="text-xs text-gray-600 font-medium">Listening</span>
+                            </div>
+
+                            <!-- Reading -->
+                            <div class="flex flex-col items-center">
+                                <div class="circle-gauge border-4 border-skillGreen text-gray-900 mb-2">
+                                    <span class="text-xl font-bold font-heading">90</span>
+                                </div>
+                                <span class="text-xs text-gray-600 font-medium">Reading</span>
+                            </div>
+
+                            <!-- Speaking -->
+                            <div class="flex flex-col items-center">
+                                <div class="circle-gauge border-4 border-skillGrey text-gray-900 mb-2">
+                                    <span class="text-xl font-bold font-heading">90</span>
+                                </div>
+                                <span class="text-xs text-gray-600 font-medium">Speaking</span>
+                            </div>
+
+                            <!-- Writing -->
+                            <div class="flex flex-col items-center">
+                                <div class="circle-gauge border-4 border-skillPink text-gray-900 mb-2">
+                                    <span class="text-xl font-bold font-heading">90</span>
+                                </div>
+                                <span class="text-xs text-gray-600 font-medium">Writing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MIDDLE SECTION: TEST CENTRE DETAILS & FURTHER INFORMATION -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-gray-200 border-b border-gray-200 text-xs">
+                    <!-- Left: Test Centre Details -->
+                    <div class="p-6 grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4">
+                        <div class="space-y-1.5">
+                            <p class="text-gray-600"><span class="font-bold text-gray-800">Test Centre Country:</span> Egypt</p>
+                            <p class="text-gray-600"><span class="font-bold text-gray-800">Test Centre ID:</span> 74657</p>
+                            <p class="text-gray-600"><span class="font-bold text-gray-800">Test Centre:</span> MUST Test Centre</p>
+                        </div>
+                        <div class="space-y-1.5">
+                            <p class="text-gray-600"><span class="font-bold text-gray-800">Test Date:</span> 21 Oct 2026</p>
+                            <p class="text-gray-600"><span class="font-bold text-gray-800">Valid Until:</span> 21 Oct 2028</p>
+                            <p class="text-gray-600"><span class="font-bold text-gray-800">Issue Date:</span> 21 Oct 2026</p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Further Information -->
+                    <div class="p-6">
+                        <h4 class="text-sm font-bold text-gray-800 mb-3">Further Information</h4>
+                        <p class="text-gray-600 italic leading-relaxed text-xs">
+                            PTE Core is designed to test English language proficiency for a range of general purposes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- BOTTOM SECTION: SKILLS BREAKDOWN & CANDIDATE INFORMATION -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-gray-200 text-xs">
+                    <!-- Left: Skills Breakdown Chart -->
+                    <div class="p-6">
+                        <h3 class="text-sm font-bold text-gray-800 mb-6">Skills Breakdown</h3>
+
+                        <div class="space-y-3 relative pl-16 pr-4">
+                            <!-- Overall 90 Vertical Guide Line -->
+                            <div class="absolute top-0 bottom-0 left-[calc(4rem+90%)] w-0.5 bg-gray-400 z-10 flex flex-col items-center">
+                                <span class="text-[10px] text-gray-600 whitespace-nowrap absolute -top-5 font-medium">Overall <strong class="text-gray-900">90</strong></span>
+                            </div>
+
+                            <!-- Listening Bar -->
+                            <div class="flex items-center">
+                                <span class="w-16 -ml-16 text-right pr-3 text-gray-600 text-xs font-medium">Listening <strong class="text-gray-900 ml-1">88</strong></span>
+                                <div class="w-full bg-gray-100 h-5 rounded-sm overflow-hidden">
+                                    <div class="bg-skillNavy h-full" style="width: 88%;"></div>
+                                </div>
+                            </div>
+
+                            <!-- Reading Bar -->
+                            <div class="flex items-center">
+                                <span class="w-16 -ml-16 text-right pr-3 text-gray-600 text-xs font-medium">Reading <strong class="text-gray-900 ml-1">90</strong></span>
+                                <div class="w-full bg-gray-100 h-5 rounded-sm overflow-hidden">
+                                    <div class="bg-skillGreen h-full" style="width: 90%;"></div>
+                                </div>
+                            </div>
+
+                            <!-- Speaking Bar -->
+                            <div class="flex items-center">
+                                <span class="w-16 -ml-16 text-right pr-3 text-gray-600 text-xs font-medium">Speaking <strong class="text-gray-900 ml-1">90</strong></span>
+                                <div class="w-full bg-gray-100 h-5 rounded-sm overflow-hidden">
+                                    <div class="bg-skillGrey h-full" style="width: 90%;"></div>
+                                </div>
+                            </div>
+
+                            <!-- Writing Bar -->
+                            <div class="flex items-center">
+                                <span class="w-16 -ml-16 text-right pr-3 text-gray-600 text-xs font-medium">Writing <strong class="text-gray-900 ml-1">90</strong></span>
+                                <div class="w-full bg-gray-100 h-5 rounded-sm overflow-hidden">
+                                    <div class="bg-skillPink h-full" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Candidate Information -->
+                    <div class="p-6">
+                        <h3 class="text-sm font-bold text-gray-800 mb-4">Candidate Information</h3>
+                        <div class="space-y-2 text-gray-600">
+                            <p><span class="font-bold text-gray-800">Date of Birth:</span> 26 Sep 1997</p>
+                            <p><span class="font-bold text-gray-800">Country of Citizenship:</span> Egypt</p>
+                            <p><span class="font-bold text-gray-800">Country of Residence:</span> Egypt</p>
+                            <p><span class="font-bold text-gray-800">Gender:</span> Male</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- VIEW AS PDF BUTTON -->
+            <div class="flex justify-center my-6 no-print">
+                <button onclick="window.print()" class="btn-hover bg-purple-200 text-pearsonNavy font-semibold px-8 py-2.5 rounded-full text-sm shadow-sm flex items-center space-x-2 border border-purple-300">
+                    <span>View as pdf</span>
+                </button>
+            </div>
+
+            <!-- SKILLS PROFILE PROMPT CARD -->
+            <div class="bg-white rounded-lg border border-gray-200 p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm no-print">
+                <div class="flex items-center space-x-4">
+                    <!-- Icon SVG -->
+                    <div class="w-10 h-10 flex-shrink-0 rounded-full bg-yellow-100 text-pearsonYellow flex items-center justify-center border border-yellow-300">
+                        <i class="fa-solid fa-magnifying-glass text-lg"></i>
+                    </div>
+                    <p class="text-sm font-medium text-gray-800">
+                        Your Skills Profile provides more information about your performance in the test.
+                    </p>
+                </div>
+                <button class="btn-hover bg-pearsonPurple text-white px-6 py-2.5 rounded-full text-sm font-medium whitespace-nowrap shadow-sm">
+                    View skills profile
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="text-center py-6 text-xs text-gray-600 border-t border-gray-200 mt-8 bg-white no-print">
+        <div class="flex justify-center space-x-2 mb-1">
+            <a href="#" class="text-pearsonPurple hover:underline font-medium">Privacy policy</a>
+            <span>|</span>
+            <a href="#" class="text-pearsonPurple hover:underline font-medium">Cookies</a>
+            <span>|</span>
+            <a href="#" class="text-pearsonPurple hover:underline font-medium">Contact us</a>
+        </div>
+        <p class="text-gray-500">
+            Copyright © 1996–2026 Pearson. All rights reserved.
+        </p>
+    </footer>
+
+</body>
+</html>
